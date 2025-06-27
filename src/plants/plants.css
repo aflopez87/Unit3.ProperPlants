@@ -1,0 +1,27 @@
+.plant-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.plant-list p{
+    font-size: 6rem;
+    margin: 0;
+    padding: 10px;
+}
+
+.plant-list div {
+    border: 1px solid lightgrey;
+    margin: 10px;
+}
+
+.plant-list button {
+    width: 90%;
+    padding: 0;
+    margin: 10px;
+    border: 1px solid black;    
+}
+
+.plant-list h3{
+    margin: 10px;
+    text-align: center;
+}

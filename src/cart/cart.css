@@ -1,0 +1,25 @@
+
+
+.cart-container div{
+    display: flex;
+}
+
+.button-qty{
+    justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
+    padding: 5px;
+}
+
+.button-qty button{
+    width: 40%;
+    border: 1px solid black;
+}
+
+.button-qty p{
+    margin: 0;
+    text-align: center;
+}
+
+div .image-name{
+    margin-top: 10px;
+}

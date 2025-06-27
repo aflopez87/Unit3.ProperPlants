@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import './index.css'
 import PLANTS from "./data.js";
 import PlantList from "./plants/PlantList";
 import CartList from "./cart/CartList";
 
 export default function App() {
+  const [plants, setPlants] = useState(PLANTS);
   const [cart, setCart] = useState({});
+  
   const addToCart = (plant)=>{
     setCart(previous => ({
       ...previous,
@@ -19,7 +22,10 @@ export default function App() {
     setCart(previous => {
       const newCart = {...previous};
       if (newCart[plant.id]) {
-      newCart[plant.id].quantity -= 1;
+        newCart[plant.id]={
+        ...newCart[plant.id],
+        quantity: newCart[plant.id].quantity -1
+      };
       if (newCart[plant.id].quantity <= 0){
         delete newCart[plant.id];
       }
@@ -27,6 +33,9 @@ export default function App() {
       return newCart;
     });
   };
+
+  
+
   return (
     <>
       <header>
@@ -35,7 +44,9 @@ export default function App() {
       <main>
         <section className="plants">
           <h2>Plants</h2>
-          <PlantList plants={PLANTS} addToCart={addToCart} />
+          <div className="plants-container">
+          <PlantList plants={plants} addToCart={addToCart} />
+          </div>
         </section>
         <section className="cart">
           <h2>Cart</h2>

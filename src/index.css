@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    border: 0;
+    font-family: sans-serif;
+}
+
+header{
+    margin: 10px 0 10px 10px;
+}
+
+h2 {
+    margin: 10px 0 10px 10px;
+}
+
+.plants{
+    width: 100%;
+}
+
+.cart{
+    width: 100%;
+}
+
+main {
+    display: flex;
+
+}
+

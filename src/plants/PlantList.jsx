@@ -4,7 +4,7 @@ import PlantAdd from  "./PlantAdd"
 
 export default function PlantList({ plants, addToCart }) {
   return (
-    <div className="plant-list">
+    <div className="plant-list" >
         {plants.map((plant) => (
           <div key={plant.id}>
             <p>{plant.image}</p>
